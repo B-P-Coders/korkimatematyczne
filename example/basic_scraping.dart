@@ -1,6 +1,6 @@
+// ignore: unused_import
 import 'package:korkimatematyczne/korkimatematyczne.dart';
 
 void main() {
-  var awesome = Awesome();
-  print('awesome: ${awesome.isAwesome}');
+  // TODO: Write some examples
 }
