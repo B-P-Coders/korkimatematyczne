@@ -1,5 +1,5 @@
 // ignore: unused_import
-import '../lib/korkimatematyczne.dart';
+import 'package:korkimatematyczne/korkimatematyczne.dart';
 import 'package:test/test.dart';
 
 // Put integration tests here

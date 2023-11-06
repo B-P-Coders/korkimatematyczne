@@ -1,4 +1,4 @@
-import '../lib/src/scraper.dart';
+import 'package:korkimatematyczne/src/scraper.dart';
 import 'package:test/test.dart';
 
 // Tests of scraper submodule
