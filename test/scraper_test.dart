@@ -42,5 +42,19 @@ void main() {
             isA<ScraperException>(),
           ));
     });
+
+    test('Subindex', () async {
+      final subindexes = await myScraper
+          .getSubindexes("/p/matematyka-zbior-zadan-do-liceow-i_26.html");
+      expect(
+          subindexes[0].name,
+          equals(
+              "1.\u{a0}Ułamki algebraiczne. Równania i nierówności wymierne. Funkcje wymierne."));
+      expect(
+          subindexes[7].index,
+          equals(
+            "https://korkimatematyczne.blogspot.com/2022/02/8-geometria-analityczna-pr.html",
+          ));
+    });
   });
 }
