@@ -39,4 +39,12 @@ import 'package:korkimatematyczne/korkimatematyczne.dart';
   print("Images: ${imgs.join(", ")}");
 ```
 
- 
+## Regenerating index
+
+After changing `journal.json` file you should also rebuild `journal.g.dart` using this command
+
+```bash
+dart run build_runner build
+```
+
+# 
