@@ -1,3 +1,4 @@
+/// A singe book entry in list of supported math books
 class BookIndex {
   late String name;
   late String index;
@@ -10,6 +11,7 @@ class BookIndex {
   }
 }
 
+/// A single chapter inside a maths book
 class Subindex {
   late String name;
   late String index;
@@ -17,6 +19,8 @@ class Subindex {
   Subindex(this.name, this.index);
 }
 
+/// A single lesson inside a chapter
+/// contains a list of `Task`s
 class LessonIndex {
   late String name;
   late String link;
@@ -27,6 +31,7 @@ class LessonIndex {
   LessonIndex(this.name, this.link);
 }
 
+/// A single task inside a lesson
 class Task {
   late String name;
   late String link;
