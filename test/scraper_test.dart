@@ -53,8 +53,23 @@ void main() {
       expect(
           subindexes[7].index,
           equals(
-            "https://korkimatematyczne.blogspot.com/2022/02/8-geometria-analityczna-pr.html",
+            "/2022/02/8-geometria-analityczna-pr.html",
           ));
+    });
+
+    test('Lesson index', () async {
+      final lessonindexes = await myScraper
+          .getLessonIndexes("/2022/02/8-geometria-analityczna-pr.html");
+      expect(lessonindexes[0].name,
+          equals("1. Wektor w układzie współrzędnych. Podział odcinka."));
+      expect(
+          lessonindexes[0].link,
+          equals(
+            "/2022/02/1-wektor-w-ukadzie-wsporzednych-podzia.html",
+          ));
+      final tasks0 = await lessonindexes[0].tasks;
+      expect(tasks0[0].name, equals("\u{a0}Zad. 8.1"));
+      expect(tasks0[0].link, equals("/2022/02/801-klasa-3-4lo-pr.html"));
     });
   });
 }

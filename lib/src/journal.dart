@@ -1,5 +1,5 @@
 import 'package:embed_annotation/embed_annotation.dart';
-import 'book_index.dart';
+import 'models.dart';
 import 'scraper.dart';
 
 part 'journal.g.dart';
@@ -26,9 +26,22 @@ class Journal {
     throw JournalException("Book Index named $name not found");
   }
 
-  // Future<LessonIndex> getLessonIndex(Subindex sb, int idx) async {
-  //   return await _scraper.get TODO: Get lesson index
-  // }
+  Future<List<LessonIndex>> getLessonIndexes(Subindex sb) async {
+    return await _scraper.getLessonIndexes(sb.index);
+  }
+
+  Future<List<String>> getImagesForTask(LessonIndex li, int idx) async {
+    return await _scraper.getImages((await li.tasks)[idx].link);
+  }
+
+  Future<List<String>> getImageForTaskByName(
+      LessonIndex li, String name) async {
+    for (final (i, e) in (await li.tasks).indexed) {
+      if (e.name == name) return await getImagesForTask(li, i);
+    }
+    throw JournalException(
+        "Task named $name not found in lesson index ${li.name}");
+  }
 }
 
 class JournalException implements Exception {

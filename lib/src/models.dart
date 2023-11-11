@@ -19,7 +19,17 @@ class Subindex {
 
 class LessonIndex {
   late String name;
-  late List<Map<String, String>> tasks;
+  late String link;
 
-  LessonIndex(this.name, this.tasks);
+  // Task list requires a lot of requests
+  late Future<List<Task>> tasks;
+
+  LessonIndex(this.name, this.link);
+}
+
+class Task {
+  late String name;
+  late String link;
+
+  Task(this.name, this.link);
 }
