@@ -47,3 +47,8 @@ After changing `journal.json` file you should also rebuild `journal.g.dart` usin
 dart run build_runner build
 ```
 
+## Docs
+
+You can find docs [here](https://b-p-coders.github.io/korkimatematyczne/)
+
+
