@@ -15,7 +15,7 @@ class Scraper {
       List<Map<String, dynamic>> elems =
           _scr.getElement(".separator > a", ["href"]);
       final res = elems
-          .map((e) => _stripFull(e['attributes']['href']) as String)
+          .map((e) => _stripFull(e['attributes']['href']))
           .toList();
 
       if (res.isEmpty) {

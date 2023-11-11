@@ -1,6 +1,6 @@
 name: korkimatematyczne
 description: A library used to scrape korkimatematyczne.blogspot.com website
-version: 0.1.0
+version: 1.0.0-rc
 repository: https://github.com/B-P-Coders/korkimatematyczne
 
 environment:
