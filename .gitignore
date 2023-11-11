@@ -6,10 +6,6 @@
 # https://dart.dev/guides/libraries/private-files#pubspeclock.
 pubspec.lock
 
-# Generated files (by embed module)
-*.g.dart
-*.g.part
-
 ### macOS ###
 # General
 .DS_Store
