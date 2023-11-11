@@ -45,7 +45,7 @@ void main() {
 
     test('Subindex', () async {
       final subindexes = await myScraper
-          .getSubindexes("/p/matematyka-zbior-zadan-do-liceow-i_26.html");
+          .getSubindexeses("/p/matematyka-zbior-zadan-do-liceow-i_26.html");
       expect(
           subindexes[0].name,
           equals(

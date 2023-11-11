@@ -29,7 +29,7 @@ class Scraper {
     }
   }
 
-  Future<List<Subindex>> getSubindexes(String link) async {
+  Future<List<Subindex>> getSubindexeses(String link) async {
     if (await _scr.loadWebPage(_transformToMobile(link))) {
       final subindexes = _scr
           .getElement(".post-body > p > a", ['href'])

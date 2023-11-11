@@ -22,14 +22,14 @@ class Journal {
   }
 
   /// Gets list of `Subindex`es for specified index in list
-  Future<List<Subindex>> getSubindex(int idx) async {
-    return await _scraper.getSubindexes(availableBooks[idx].index);
+  Future<List<Subindex>> getSubindexes(int idx) async {
+    return await _scraper.getSubindexeses(availableBooks[idx].index);
   }
 
   /// Gets list of `Subindex`es for specified name
-  Future<List<Subindex>> getSubindexesbyName(String name) async {
+  Future<List<Subindex>> getSubindexesesbyName(String name) async {
     for (final (i, e) in availableBooks.indexed) {
-      if (e.name == name) return await getSubindex(i);
+      if (e.name == name) return await getSubindexes(i);
     }
     throw JournalException("Book Index named $name not found");
   }

@@ -21,7 +21,7 @@ void main() {
           equals("/p/matematyka-zbior-zadan-do-liceow-i_26.html"));
     });
     test('Get subindex', () async {
-      mySubindex = (await myJournal.getSubindex(0))[0];
+      mySubindex = (await myJournal.getSubindexes(0))[0];
       expect(
           mySubindex.name,
           equals(
@@ -31,7 +31,7 @@ void main() {
     });
     test('Get subindex by name', () async {
       mySubindex = (await myJournal
-          .getSubindexesbyName("LO4 Matematyka kl3 rozszerzona"))[1];
+          .getSubindexesesbyName("LO4 Matematyka kl3 rozszerzona"))[1];
       expect(mySubindex.name, equals("2. Ciągi."));
       expect(mySubindex.index, equals("/2021/09/2-ciagi.html"));
     });
