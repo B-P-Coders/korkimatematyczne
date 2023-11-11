@@ -47,4 +47,3 @@ After changing `journal.json` file you should also rebuild `journal.g.dart` usin
 dart run build_runner build
 ```
 
-# 
